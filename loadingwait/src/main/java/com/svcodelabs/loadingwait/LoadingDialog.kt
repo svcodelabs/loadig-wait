@@ -23,7 +23,7 @@ class LoadingDialog(private val context: Context) {
         return dialog
     }
 
-    private fun progressDialog(): Dialog {
+    fun progressDialog(): Dialog {
         val dialog = buildDialogView(R.layout.dialog_layout)
 
         val avd = AnimatedVectorDrawableCompat.create(context, R.drawable.avd_dialog_img)
@@ -38,16 +38,6 @@ class LoadingDialog(private val context: Context) {
         avd?.start()
 
         return dialog
-    }
-
-    fun showDialog(){
-        val dialog = progressDialog()
-        dialog.show()
-    }
-
-    fun dismisDialog() {
-        val dialog = progressDialog()
-        dialog.dismiss()
     }
 
 
